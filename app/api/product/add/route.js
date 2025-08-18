@@ -4,6 +4,8 @@ import authSeller from '@/lib/authSeller'
 import Product from "@/models/Product";
 import connectDB from "@/lib/connectDB"; 
 import { NextResponse } from "next/server";
+import connectDB from "@/lib/connectDB";
+
 
 
 //configure cloudinary
