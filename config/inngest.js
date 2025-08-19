@@ -1,7 +1,9 @@
 import { Inngest } from "inngest";
-import connectDB from "./db";
+
 import User from "@/models/User";
 import Order from "@/models/Order";
+import connectDB from "@/config/db";
+
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "quickcart-next" });
@@ -84,6 +86,6 @@ export const createUserOrder = inngest.createFunction(
         await connectDB()
         await Order.insertMany(orders)
 
-        return { success: true, proccesed: orders.length };
+        return { success: true, processed: orders.length };
     }
 )
