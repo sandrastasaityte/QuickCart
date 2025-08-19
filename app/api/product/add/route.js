@@ -2,7 +2,7 @@ import { v2 as cloudinary } from "cloudinary";
 import { getAuth } from '@clerk/nextjs/server';
 import authSeller from '@/lib/authSeller';
 import Product from "@/models/Product";
-import connectDB from "@/lib/connectDB"; 
+import connectDB from "@/confiq/db"; 
 import { NextResponse } from "next/server";
 
 // Configure Cloudinary
@@ -58,7 +58,7 @@ export async function POST(request) {
 
         const image = result.map(result => result.secure_url);
 
-        await connectDB();
+        await connectDB()
 
         const newProduct = await Product.create({
             userId,
