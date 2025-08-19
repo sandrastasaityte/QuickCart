@@ -17,7 +17,7 @@ if(!cached) {
         const opts = {
             bufferCommands:false
         } 
-        cached.promise = (await mongoose.connect('${process.env.MONGODB_URI}/quickcart',opts)).then(mongoose => {
+        cached.promise = (await mongoose.connect(`${process.env.MONGODB_URI}/quickcart`,opts)).then(mongoose => {
             return mongoose
         })
     } 
