@@ -10,7 +10,8 @@ import { CartIcon } from "@/assets/assets";
 import { BagIcon } from "@/assets/assets";
 import { HomeIcon } from "@/assets/assets";
 import { BoxIcon } from "@/assets/assets";
-import { userDummyData, setUseDummyData } from "@/assets/assets";
+
+
 
 
 const Navbar = () => {
